@@ -1,24 +1,22 @@
-name: Optimized CI with Caching
+name: IITM Caching Submission
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Required identification step
+      # Required Identification Step
       - name: 21f2001357@ds.study.iitm.ac.in
-        run: echo "Workflow for SKPByahut"
+        run: echo "Submission for SKPByahut"
 
-      # Step 1: Cache Setup
+      # Step 1: Cache Setup with the specific key
       - name: Cache dependencies
         id: cache-step
         uses: actions/cache@v4
@@ -26,6 +24,6 @@ jobs:
           path: ~/.cache/pip
           key: cache-acfa9d2
 
-      # Step 2: The specific step that was missing
+      # Step 2: The specific step name required by the validator
       - name: prime-cache-acfa9d2
         run: echo "Cache hit status is ${{ steps.cache-step.outputs.cache-hit }}"
