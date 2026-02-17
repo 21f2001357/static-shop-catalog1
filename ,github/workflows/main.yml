@@ -27,5 +27,5 @@ jobs:
           key: cache-f0b8518
 
       # Step 2: The specific step that was missing
-      - name: prime-cache-f0b8518
+      - name: prime-cache-acfa9d2
         run: echo "Cache hit status is ${{ steps.cache-step.outputs.cache-hit }}"
