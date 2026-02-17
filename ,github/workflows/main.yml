@@ -24,7 +24,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: cache-f0b8518
+          key: cache-acfa9d2
 
       # Step 2: The specific step that was missing
       - name: prime-cache-acfa9d2
